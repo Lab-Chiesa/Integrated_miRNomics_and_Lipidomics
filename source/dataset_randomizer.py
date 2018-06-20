@@ -114,12 +114,12 @@ else:
 if argv.mirna_dataframe:
     mirna_dataframe = argv.mirna_dataframe
 else:
-    mirna_dataframe = "megatable_mirna.csv"
+    mirna_dataframe = "miRNAs_dataset.csv"
 
 if argv.lipid_dataframe:
     lipid_dataframe = argv.lipid_dataframe
 else:
-    lipid_dataframe = "megatable_lipi.csv"
+    lipid_dataframe = "lipidomics_dataset.csv"
 
 if argv.outfile_separator:
     sep = argv.outfile_separator
@@ -695,7 +695,7 @@ for index in range(dataframes_to_yeld):
     del fake_headers_list
     del fake_mir_df
     
-    out_mirna_file_name = "megarandom_mirna_" + str(index) + ".csv"
+    out_mirna_file_name = "rnd_mirna_" + str(index) + ".csv"
     fmir_df.to_csv(out_mirna_file_name, index = False, sep = sep)
 
 # =======================
@@ -741,5 +741,5 @@ for index in range(dataframes_to_yeld):
     del fake_headers_list
     del fake_lip_df
     
-    out_lipi_file_name = "megarandom_lipi_" + str(index) + ".csv"
+    out_lipi_file_name = "rnd_lipi_" + str(index) + ".csv"
     flip_df.to_csv(out_lipi_file_name, index = False, sep = sep)
