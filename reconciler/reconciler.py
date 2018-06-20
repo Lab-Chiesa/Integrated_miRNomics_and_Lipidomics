@@ -25,6 +25,7 @@ __version__ = "0.4.7.160518"
 
 Changelog
 =========
+- 20/06/2018 Now supports input data from remote paths
 - 16/05/2018 Compiled some regexes for fragments of performance gains
 
 - 23/11/2017 Added @functools.rlu_cache and cleaned up functions
@@ -241,7 +242,8 @@ from manzutils import (
     mirna_ids,
     lipi_ids,
     strip_mirname,
-    list_permute_all
+    list_permute_all,
+    absolute_filename
 )
 
 # =====================================
@@ -1366,12 +1368,19 @@ elif mirna_dataframe.endswith(".txt"):
 else:
     mirna_filename_prefix = mirna_dataframe
 
+if "/" in mirna_filename_prefix:
+    mirna_filename_prefix = absolute_filename(mirna_filename_prefix)
+
+
 if lipid_dataframe.endswith(".csv"):
     lipi_filename_prefix = lipid_dataframe.replace(".csv", "")
 elif lipid_dataframe.endswith(".txt"):
     lipi_filename_prefix = lipid_dataframe.replace(".txt", "")
 else:
     lipi_filename_prefix = lipid_dataframe
+
+if "/" in lipi_filename_prefix:
+    lipi_filename_prefix = absolute_filename(lipid_dataframe)
 
 
 outfile_pearson_filename = (
