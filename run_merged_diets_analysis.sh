@@ -12,7 +12,7 @@ echo
 echo REQUIREMENTS
 echo ============
 echo
-echo Please note that Python 3.6+ is required to run Python programs.
+echo Please note that Python 3.6+ is required to run supplied Python programs.
 echo There are also required dependencies to be installed, see each
 echo file requirements and/or see ModuleNotFoundError complaints.
 echo
