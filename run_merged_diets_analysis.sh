@@ -1,9 +1,24 @@
 #!bin/bash
 
-# This script 
+echo
+echo =========================================================================
+echo This simple script performs all steps needed to perform all correlations
+echo    in both miRNA and lipid datasets and reproduce the results of the
+echo    paper. Please note that, since the picking of values in the lipid
+echo   dataframe and their pairing with miRNA values can vary from analysis
+echo     to analysis (see the paper), actual results might slightly vary.
+echo =========================================================================
+echo
+echo Please note that Python 3.6+ is required to run Python programs.
+echo There are also required dependencies to be installed, see each
+echo file requirements and/or see ModuleNotFoundError complaints.
+echo If in trouble, try: less /lib/manzutils.py
+echo
+
+export PYTHONPATH=$PYTHONPATH:./lib/
 
 # correlating miRNAs with lipids (default options, but merging diets)
-python reconciler.py mirnas_anon.csv lipids_anon.csv -d
+python ./reconciler/reconciler.py data/miRNAs_dataset.csv data/lipidomics_dataset.csv -d
 
 # changing the name of resulting csv table into something more apt
 mv statfriendly_mergediets_spearman_mirnas_anon_lipids_anon_0.01_0.7_SD_150p_allowed0aves_1.csv correlations.csv
