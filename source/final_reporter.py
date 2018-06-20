@@ -381,10 +381,15 @@ print("\nDone indexing.")
 # to report, we need to know stuff about the original lipid database, and
 # also stuff of the Reconciler-produced table.
 
-all_lipids_and_classes_info = pickle.load(
-    open("all_lipids_and_classes_info.p", "rb")
+try:
+    all_lipids_and_classes_info = pickle.load(
+        open("all_lipids_and_classes_info.p", "rb")
     )
-
+except FileNotFoundError:
+    all_lipids_and_classes_info = pickle.load(
+        open("./source/all_lipids_and_classes_info.p", "rb")
+    )
+    
 reconciled_lipids_and_classes_info = index_lipid_species(df, "lipid")
 
 
