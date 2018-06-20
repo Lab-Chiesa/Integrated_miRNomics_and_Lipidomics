@@ -1,13 +1,16 @@
 #!bin/bash
 
 echo
-echo =========================================================================
-echo This simple script performs all steps needed to perform all correlations
-echo    in both miRNA and lipid datasets and reproduce the results of the
-echo    paper. Please note that, since the picking of values in the lipid
-echo   dataframe and their pairing with miRNA values can vary from analysis
-echo     to analysis (see the paper), actual results might slightly vary.
-echo =========================================================================
+echo "========================================================================="
+echo "This simple script performs all steps needed to perform all correlations"
+echo "   in both miRNA and lipid datasets and reproduce the results of the"
+echo "   paper. Please note that, since the picking of values in the lipid"
+echo "  dataframe and their pairing with miRNA values can vary from analysis"
+echo "    to analysis (see the paper), actual results might slightly vary."
+echo "========================================================================="
+echo
+echo REQUIREMENTS
+echo ============
 echo
 echo Please note that Python 3.6+ is required to run Python programs.
 echo There are also required dependencies to be installed, see each
