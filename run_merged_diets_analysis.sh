@@ -16,7 +16,7 @@ echo Please note that Python 3.6+ is required to run Python programs.
 echo There are also required dependencies to be installed, see each
 echo file requirements and/or see ModuleNotFoundError complaints.
 echo
-echo "   ** If in trouble with dependencies, try: less ./lib/manzutils.py **"
+echo "** If in trouble with dependencies, try: less ./lib/manzutils.py **"
 echo
 echo Now running tests. Please note that this might take a few hours.
 
@@ -27,11 +27,18 @@ python ./reconciler/reconciler.py data/miRNAs_dataset.csv data/lipidomics_datase
 
 # changing the name of resulting csv table into something more apt
 mv statfriendly_mergediets_spearman_miRNAs_dataset_lipidomics_dataset.csv_0.01_0.7_SD_150p_allowed0aves_1.csv merged_diets_correlations.csv
-echo The correlations can be found in: merged_diets_correlations.csv
+echo
+echo "** The correlations can be found in: merged_diets_correlations.csv **"
+echo
 
 # after calculating all correlations, we gather data in a final report.
-python final_reporter.py merged_diets_correlations
-echo "Open correlations_miR_enrich.csv to see the number of miRNAs passing tests."
+python ./source/final_reporter.py merged_diets_correlations.csv
+echo
+echo "**Open correlations_miR_enrich.csv to see the number of miRNAs passing tests.**"
+echo
 
-python mirna_heatmap_plotter.py correlations.csv -x -y -a -r -t 350 -f 0.7 -R
-echo See how tests cluster by opening correlations_mir_heatmap_t350.pdf
+python ./source/mirna_heatmap_plotter.py merged_diets_correlations.csv -x -y -a -r -t 350 -f 0.7 -R
+echo
+echo See how tests cluster by opening merged_diets_correlations_mir_heatmap_t350.pdf
+echo
+echo Done!
