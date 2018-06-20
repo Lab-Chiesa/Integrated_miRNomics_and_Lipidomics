@@ -29,7 +29,7 @@ echo The script can be easily modified to produce as many random dataset
 echo as required, as well as to perform as many analyses as needed.
 echo Please consider that one full run produces 15-20 MB of data, and takes
 echo a few hours to complete.
-echo.
+echo
 echo Now running tests. Please note that this might take a few hours.
 
 export PYTHONPATH=$PYTHONPATH:./lib/
