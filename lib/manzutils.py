@@ -1,6 +1,6 @@
 # author: stefano.manzini@gmail.com
 
-__version__ = "0.3.14.160518"
+__version__ = "0.3.15.200618"
 __author__ = "Stefano Manzini; stefano.manzini@gmail.com"
 
 """
@@ -21,6 +21,10 @@ pip install plotly
 
 Download it, then cd into the dir and:
 <your python> setup.py install
+
+/* 20/06/2018
+ * added absolute_filename()
+ */
 
 /* 16/05/2018
  * pre-compiled regexes for lipi_ids() and mirna_ids()
@@ -89,7 +93,7 @@ from random import choice, randint
 
 # plotly                  
 import plotly.tools as tls
-tls.set_credentials_file(username = "your_user", api_key = "your_key")
+tls.set_credentials_file(username = "Manz", api_key = "2gmj2v0hxj")
 import plotly.plotly as py
 import plotly.graph_objs as go
 
@@ -97,6 +101,24 @@ import plotly.graph_objs as go
 # =============================================================================
 #                                * functions *
 # =============================================================================
+
+
+def absolute_filename(fullpath):
+    """This function strips a full path of all directories, leaving only the
+    filename:
+    
+    /dir1/dir2/dir3/file
+
+    becomes
+
+    file
+
+    input: string
+    returns: string
+
+    """
+    match = re.search(r"(.*\/)(.*)", fullpath)
+    return match.group(2)
 
 
 def attrib_index(series):
