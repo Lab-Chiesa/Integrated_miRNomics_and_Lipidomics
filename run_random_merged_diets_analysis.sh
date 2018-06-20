@@ -18,7 +18,7 @@ echo file requirements and/or see ModuleNotFoundError complaints.
 echo
 echo "** If in trouble with dependencies, try: less ./lib/manzutils.py **"
 echo
-echo MAKING & ANALYZING RANDOMIZED DATASETS
+echo "MAKING & ANALYZING RANDOMIZED DATASETS"
 echo =======================================
 echo
 echo In the paper, one thousand datasets (both miRNAs and lipids) have been
@@ -35,25 +35,25 @@ echo Now running tests. Please note that this might take a few hours.
 export PYTHONPATH=$PYTHONPATH:./lib/
 
 # making the random datasets to analyze
-python ./source/dataset_randomizer.py -m data/miRNAs_dataset.csv -l data/lipidomics_dataset.csv
+python -W ignore ./source/dataset_randomizer.py -m data/miRNAs_dataset.csv -l data/lipidomics_dataset.csv
 
 # correlating miRNAs with lipids (default options, but merging diets)
-python ./reconciler/reconciler.py data/miRNAs_dataset.csv data/lipidomics_dataset.csv -d
+python ./reconciler/reconciler.py rnd_mirna_0.csv rnd_lipi_0.csv -d
 
 # changing the name of resulting csv table into something more apt
-mv statfriendly_mergediets_spearman_miRNAs_dataset_lipidomics_dataset.csv_0.01_0.7_SD_150p_allowed0aves_1.csv merged_diets_correlations.csv
+mv statfriendly_mergediets_spearman_rnd_mirna_0_rnd_lipi_0_0.01_0.7_SD_150p_allowed0aves_1.csv merged_diets_random_correlations.csv
 echo
-echo "** The correlations can be found in: merged_diets_correlations.csv **"
+echo "** The correlations can be found in: merged_diets_random_correlations.csv **"
 echo
 
 # after calculating all correlations, we gather data in a final report.
-python ./source/final_reporter.py merged_diets_correlations.csv
+python ./source/final_reporter_rnd.py merged_diets_random_correlations.csv
 echo
 echo "**Open correlations_miR_enrich.csv to see the number of miRNAs passing tests.**"
 echo
 
-python ./source/mirna_heatmap_plotter.py merged_diets_correlations.csv -x -y -a -r -t 350 -f 0.7 -R
+python ./source/mirna_heatmap_plotter.py merged_diets_random_correlations.csv -x -y -r -t 25 -f 0.7 -R
 echo
-echo See how tests cluster by opening merged_diets_correlations_mir_heatmap_t350.pdf
+echo See how tests cluster by opening merged_diets_random_correlations_mir_heatmap_t25.pdf
 echo
 echo Done!
