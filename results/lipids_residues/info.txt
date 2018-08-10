@@ -1,0 +1,7 @@
+This folder contains Reconciler results run on a modified lipidomics dataset that only contains lipids
+residues (i.e., like 18:1, 24:0).
+
+Mass spectrometry cannot resolve lipids with same mass, that can result from having different residues.
+For example, PC P-16:0/16:1 (PC O-16:1/16:1) can either contain a 16:0 and a 16:1, or two 16:1 residues.
+With *unambiguous* we mean we dropped such ties: no speculations are made to weigh those abundances, they
+are just dropped.
