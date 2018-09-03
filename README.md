@@ -18,6 +18,10 @@ Contains the two datasets: digested data from smallRNAseq and mass-spec lipidomi
 
 Contains a Python library of common functions called by other programs.
 
+**/miRNA_targets**
+
+Contains TargetScan mRNA predictions of miRNAs discussed in the paper, keyword-based GeneCards gene lists, and results about miRNA to mRNA predictions.
+
 **/reconciler**
 
 Contails reconciler.py, the main program that does the correlations. Extensive description of its design is contained in the paper’s Supplementary Materials and Methods.
