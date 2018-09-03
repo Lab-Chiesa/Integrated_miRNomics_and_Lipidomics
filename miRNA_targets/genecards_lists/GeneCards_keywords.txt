@@ -1,0 +1,46 @@
+acyl
+atherosclerosis
+atherosclerotic plaque
+bile acid synthesis
+ceramide
+ceramide synthesis
+bile acid
+bile secretion
+ceramide synthesis
+ceramides
+cholesterol biosynthesis
+catabolism
+metabolism
+synthesis
+cholesteryl esters
+chylomicrons
+diacylglycerol
+ethanolamine
+fatty acid catabolism
+fatty acid metabolism
+fatty acid synthesis
+free cholesterol
+galactosyl
+globotriaosylceramide
+glycerol
+glycolipid
+intestinal absorption
+lactosyl
+lipid metabolism
+lipoprotein
+lysophosphatidylcholine
+lysophosphatidylethanolamine
+lysophosphatidylinositol
+phospatidic acid
+phosphatidyl choline
+phosphatidyl ethanolamine
+phosphatidyl inositol
+phosphatidyl serine
+phospho glycerol
+remnant
+sphingolipids synthesis
+sphingolipid
+steroid synthesis
+sterol
+triacylglycerol
+triglycerides
