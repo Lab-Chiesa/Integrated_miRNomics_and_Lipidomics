@@ -1,3 +1,1 @@
 This folder contains the TargetScan mRNA predictions for the "uncharacterized miRNAs" discussed in the paper.
-For the Reader's convenience, there are different results tables, with varying "Total context++ score" cutoffs.
-Lower score is better.
