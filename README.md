@@ -1,7 +1,7 @@
 This repository has been created to host files (code and data files) related to the integrated miRNomics and lipidomics datasets produced by the [Laboratory of Pharmacology of Dyslipidemias and Atherosclerosis](http://www.disfeb.unimi.it/ecm/home/ricerca/laboratori-ricerca/laboratorio-di-farmacologia-delle-dislipidemie-e-dellaterosclerosi), of the [University of Milan](http://www.unimi.it/).
 
 **Authors:**
-[Stefano Manzini](mailto:stefano.manzini@gmail.com)1*, Marco Busnelli1*, Mika Hilvo2, Matteo Chiara3, Cinzia Parolini1, Federica Dellera1, Giulia Sara Ganzetti1, Nadia Vaira1, David Stephen Horner3, Reijo Laaksonen2, and [Giulia Chiesa](mailto:giulia.chiesa@unimi.it)1
+[Stefano Manzini](mailto:stefano.manzini@gmail.com)<sup>1</sup>*, Marco Busnelli1*, Mika Hilvo2, Matteo Chiara3, Cinzia Parolini1, Federica Dellera1, Giulia Sara Ganzetti1, Nadia Vaira1, David Stephen Horner3, Reijo Laaksonen2, and [Giulia Chiesa](mailto:giulia.chiesa@unimi.it)1
 
  _* these authors equally contributed to this work_
 
