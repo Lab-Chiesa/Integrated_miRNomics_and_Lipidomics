@@ -1,6 +1,6 @@
 # author: stefano.manzini@gmail.com
 
-__version__ = "0.3.15.200618"
+__version__ = "0.3.17.230623"
 __author__ = "Stefano Manzini; stefano.manzini@gmail.com"
 
 """
@@ -21,6 +21,23 @@ pip install plotly
 
 Download it, then cd into the dir and:
 <your python> setup.py install
+
+/* 23/06/23
+ * well, well, plotly is deprecated. Gotta remove it.
+ */
+ 
+
+/* 05/11/2018
+ * added make_data()
+ */
+
+/* 31/10/2018
+ * added despace()
+ */
+
+/* 04/08/2018
+ * added lipid_id_to_metaboanalyst(lipid_id)
+ */
 
 /* 20/06/2018
  * added absolute_filename()
@@ -72,8 +89,11 @@ Download it, then cd into the dir and:
  */
 """
 
+try:
+    import regex as re
+except:
+    import re
 
-import regex as re
 import pandas as pd
 import time
 import os
@@ -89,18 +109,64 @@ from numpy import (average,
                   absolute,
                   sum)
 
-from random import choice, randint
+from random import choice, randint, gauss
 
-# plotly                  
-import plotly.tools as tls
-tls.set_credentials_file(username = "Manz", api_key = "2gmj2v0hxj")
-import plotly.plotly as py
-import plotly.graph_objs as go
+# 23/06/23
+try:
+    tls.set_credentials_file(username = "Manz", api_key = "2gmj2v0hxj")
+except:
+    pass
 
 
 # =============================================================================
 #                                * functions *
 # =============================================================================
+
+def make_data(average, stdev, n_datapoints, decimals=2):
+    """Leverages on random.gauss to easily print datapoints to quick
+    copy-and-paste operations
+    """
+    made_data = [gauss(average, stdev) for _ in range(n_datapoints)]
+    for datapoint in made_data:
+        print(round(datapoint, decimals))
+
+
+def despace(stringlike):
+    """Return a list of words separated by one or more space.
+    It was difficult to make it with regex! :)
+    Useful to humanize R's ANOVA Tukey post hocs and put them into spreadsheets
+    """                                                
+    returnlist = []
+    word = ""
+    for char in stringlike:
+        if char == " ":
+            if len(word) > 0:
+                returnlist.append(word)
+                word = ""
+        else:
+            word += char
+    return returnlist
+
+
+def lipid_id_to_metaboanalyst(lipid_id):
+    """This function takes a Zora-produced lipid ID and
+    returns a MetaboAnalyst-compatible lipid ID.
+
+    This way, lipids are readable in MetaboAnalyst outputs.
+
+
+    input: string
+    returns: string
+    """
+
+    new = lipid_id.replace(
+        ":","_"
+        ).replace(
+        "("," "
+        ).replace(
+        ")"," "
+    )
+    return new
 
 
 def absolute_filename(fullpath):
@@ -494,7 +560,7 @@ def ls(*,
     file_number = entries_number - dir_number
 
     if pwd_at_the_end:
-        print(f"\n Directory of {curr_path}")
+        print(f"\nDirectory of {curr_path}")
 
     if entries_number > 1:
         print("\t\t", str(entries_number), "Entries")
