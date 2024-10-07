@@ -9,28 +9,28 @@ echo "  dataframe and their pairing with miRNA values can vary from analysis"
 echo "    to analysis (see the paper), actual results might slightly vary."
 echo "========================================================================="
 echo
-echo REQUIREMENTS
-echo ============
+echo "REQUIREMENTS"
+echo "============"
 echo
-echo Please note that Python 3.6+ is required to run supplied Python programs.
-echo There are also required dependencies to be installed, see each
-echo file requirements and/or see ModuleNotFoundError complaints.
+echo "Please note that Python 3.6+ is required to run supplied Python programs."
+echo "There are also required dependencies to be installed, see each"
+echo "file requirements and/or see ModuleNotFoundError complaints."
 echo
 echo "** If in trouble with dependencies, try: less ./lib/manzutils.py **"
 echo
 echo "MAKING & ANALYZING RANDOMIZED DATASETS"
-echo =======================================
+echo "======================================="
 echo
-echo In the paper, one thousand datasets (both miRNAs and lipids) have been
-echo randomized (see paper), and tested for correlation. This script
-echo produces one random dataset for both miRNAs and lipids, then performs
-echo the merged diets analysis on it.
-echo The script can be easily modified to produce as many random dataset
-echo as required, as well as to perform as many analyses as needed.
-echo Please consider that one full run produces 15-20 MB of data, and takes
-echo a few hours to complete.
+echo "In the paper, one thousand datasets (both miRNAs and lipids) have been"
+echo "randomized (see paper), and tested for correlation. This script"
+echo "produces one random dataset for both miRNAs and lipids, then performs"
+echo "the merged diets analysis on it."
+echo "The script can be easily modified to produce as many random dataset"
+echo "as required, as well as to perform as many analyses as needed."
+echo "Please consider that one full run produces 15-20 MB of data, and takes"
+echo "a few hours to complete."
 echo
-echo Now running tests. Please note that this might take a few hours.
+echo "Now running tests. Please note that this might take a few hours."
 
 export PYTHONPATH=$PYTHONPATH:./lib/
 
@@ -54,6 +54,6 @@ echo
 
 python ./source/mirna_heatmap_plotter.py merged_diets_random_correlations.csv -x -y -r -t 25 -f 0.7 -R
 echo
-echo See how tests cluster by opening merged_diets_random_correlations_mir_heatmap_t25.pdf
+echo "See how tests cluster by opening merged_diets_random_correlations_mir_heatmap_t25.pdf"
 echo
 echo Done!
