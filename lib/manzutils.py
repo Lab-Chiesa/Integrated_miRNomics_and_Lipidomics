@@ -1,6 +1,6 @@
 # author: stefano.manzini@gmail.com
 
-__version__ = "0.3.17.230623"
+__version__ = "0.3.17.071024"
 __author__ = "Stefano Manzini; stefano.manzini@gmail.com"
 
 """
@@ -21,6 +21,10 @@ pip install plotly
 
 Download it, then cd into the dir and:
 <your python> setup.py install
+
+/* 07/10/24
+ * Now strip_mirname() also works with the repo's pre-release files
+ */
 
 /* 23/06/23
  * well, well, plotly is deprecated. Gotta remove it.
@@ -1876,12 +1880,19 @@ def strip_mirname(string):
     mmu-miR-212-5p_ID=MIM0017053_MI0000696_mmu-mir-212
     """
     
+    # 07/10/24 hack to work with anon data
+    if string.startswith("xxx"):
+        return string[4:]
+        
     try:
         match = re.search(r"(.[^_]*)_.*", string)
         return match.group(1)
     except:
-        raise TypeError("Something like "
-                "mmu-miR-212-5p_ID=MIM0017053_MI0000696_mmu-mir-212 expected.")
+        raise TypeError(
+            "Something like "
+            "mmu-miR-212-5p_ID=MIM0017053_MI0000696_mmu-mir-212 expected. "
+            f"{string} got instead."
+            )
     
 
 # FIXFIXFIX: I have the feeling this can be done better.
