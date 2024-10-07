@@ -17,6 +17,26 @@ Please note that, as the article is currently being written, data is uploaded in
 
 The repository root contains two bash scripts that can be launched to reproduce the analyses described in the paper. Please consider that each reconciler.py run takes a few hours to complete (depending on your hardware). reconciler.py supports a wide range of paramenters and settings, please refer to the paper and to reconciler.py’s help to adapt the parameters to suit the needs of your analysis.
 
+To create your local clone, type in a terminal:
+```bash
+git clone https://github.com/Lab-Chiesa/Integrated_miRNomics_and_Lipidomics
+```
+
+To use the scripts, ```cd``` into the directory and type:
+```bash
+cd Integrated_miRNomics_and_Lipidomics/
+chmod +x *.sh
+```
+
+You can now call the scripts directly if your bash lies in ```/bin/bash```. If not, either modify the hash bang line or make bash execute them. Examples:
+
+```bash
+# bash is in /bin/bash
+./run_merged_diets_analysis.sh
+# bash is in PATH
+bash run_merged_diets_analysis.sh
+```
+
 - **Repository content**
 
 **/data**
