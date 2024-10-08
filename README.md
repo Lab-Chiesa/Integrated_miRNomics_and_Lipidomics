@@ -28,14 +28,12 @@ cd Integrated_miRNomics_and_Lipidomics/
 chmod +x *.sh
 ```
 
-You can now call the scripts directly if your bash lies in ```/bin/bash```. If not, either modify the hash bang line or make bash execute them. Examples:
+You will find two bash scripts in the repo directory. ```run_merged_diets_analysis.sh``` runs the correlation search in the experimental datasets. ```run_random_merged_diets_analysis.sh``` builds model datasets (1 each), then runs the same analysis on them.
 
-```bash
-# bash is in /bin/bash
-./run_merged_diets_analysis.sh
-# bash is in PATH
-bash run_merged_diets_analysis.sh
-```
+You can  call the scripts directly if your bash lies in ```/bin/bash```. Also, python programs are expecting that your python/python3 executable lives in an Anaconda environment at ```/Applications/Anaconda3/anaconda/bin/python3```.
+
+Depending on your system configuration, you might need to inspect the bash scripts to manually run the python programs appropriately.
+
 
 - **Repository content**
 
