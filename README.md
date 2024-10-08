@@ -1,14 +1,9 @@
 This repository has been created to host files (code and data files) related to the integrated miRNomics and lipidomics datasets produced by the **Laboratory of Experimental Pharmacology and Integrative Biology of Atherosclerosis** ([EN](https://disfeb-unimi-it.translate.goog/it/ricerca/risorse-e-luoghi-della-ricerca/laboratori-di-ricerca/farmacologia-sperimentale-e-biologia-integrata-dellaterosclerosi?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en-US&_x_tr_pto=wapp)|[IT](https://disfeb.unimi.it/it/ricerca/risorse-e-luoghi-della-ricerca/laboratori-di-ricerca/farmacologia-sperimentale-e-biologia-integrata-dellaterosclerosi)), of the [University of Milan](https://www.unimi.it/en).
 
 **Authors:**
-[Stefano Manzini](mailto:stefano.manzini@gmail.com)<sup>1</sup>*, Marco Busnelli<sup>1*</sup>, Mika Hilvo<sup>2</sup>, Matteo Chiara<sup>3</sup>, Cinzia Parolini<sup>1</sup>, Federica Dellera<sup>1</sup>, Giulia Sara Ganzetti<sup>1</sup>, Nadia Vaira<sup>1</sup>, David Stephen Horner<sup>3</sup>, Reijo Laaksonen<sup>2</sup>, and [Giulia Chiesa](mailto:giulia.chiesa@unimi.it)<sup>1</sup>
+[Stefano Manzini](mailto:stefano.manzini@gmail.com)<sup>1</sup>, Elsa Franchi<sup>1</sup>, Alice Colombo<sup>1</sup>, Marco Busnelli<sup>1</sup> and Giulia Chiesa<sup>1</sup>.
 
- _* these authors equally contributed to this work_
-
-1.	Department of Pharmacological and Biomolecular Sciences, Università degli Studi di Milano, via Balzaretti 9, 20133 Milano, Italy;
-2.	Zora Biosciences, 02150 Espoo, Finland;
-3.	Department of Biosciences, Università degli Studi di Milano, Via Giovanni Celoria 26 - 20133 Milano, Italy;
-
+1.	Department of Pharmacological and Biomolecular Sciences "Rodolfo Paoletti", Università degli Studi di Milano, via Balzaretti 9, 20133 Milano, Italy;
 
 
 Please note that, as the article is currently being written, data is uploaded in either _anonymized tables_ or in _password-protected zipfiles_. Final data and results will be available without restriction upon publication.
